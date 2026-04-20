@@ -1,103 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas Poirier - Portfolio et Projets</title>
-    
-    <style>
-        /* Style inspiré de l'interface GitHub Markdown */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #24292f;
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-            background-color: #ffffff;
-        }
-        h1, h2, h3 {
-            color: #000000;
-        }
-        h2 {
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 0.3em;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        p, ul, li {
-            margin-bottom: 16px;
-        }
-        ul {
-            padding-left: 2em;
-        }
-        a {
-            color: #0969da;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .intro-text {
-            font-size: 1.1em;
-            color: #57606a;
-        }
-        .code-inline {
-            background-color: #afb8c133;
-            padding: 0.2em 0.4em;
-            border-radius: 6px;
-            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
+---
+layout: default
+---
 
-    <header>
-        <h1>Nicolas Poirier</h1>
-        <p class="intro-text"><strong>Architecte Réseau, Sécurité et Automatisation</strong> | Référent Technique Grands Comptes | Cisco Champions 2023-2026 | Leadership & Excellence Technique.</p>
-        <p>Plus de 15 ans d'expériences dans la conception et le déploiement d'infrastructures réseaux et de sécurité. Actuellement impliqué sur l'accompagnement à la mise en place de socles d'automatisation agnostiques pour permettre des automatisations de bout en bout."</p>
-    </header>
-
-    <section id="expertise">
-        <h2>🔧 Expertise Principale</h2>
-        <ul>
-            <li><strong>Automatisation d'infrastructure réseau et de sécurité :</strong> Source de vérité (Nautobot, Netbox, Infrahub), Moteurs d'exécution (Ansible, Python, Nornir), Orchestration, Portail Self-Service (Django).</li>
-            <li><strong>Infrastructures Wi-Fi :</strong> Outil 1, Outil 2, Outil 3.</li>
-            <li><strong>Avant-Vente :</strong> Qualification de besoins, Design de solutions, Rédaction de Dossiers Techniques, Chiffrages services et produits</li>
-        </ul>
-    </section>
-
-    <section id="articles">
-        <h2>📚 Articles Techniques & Plongées en profondeur</h2>
-        <ul>
-            <li><a href="#">A venir</a> - <em>A venir.</em></li>            
-        </ul>
-    </section>
-
-    <section id="current-focus">
-        <h2>💡 Focus Actuel</h2>
-        <ul>
-            <li><strong>Projet 1 :</strong> Création de workflows d'automatisation en utilisant <span class="code-inline">Technologie X</span>.</li>            
-            <li><strong>Apprentissage :</strong> Benchmark d'agents IA agissant en lecture seule sur une infrastructure multi-éditeurs</li>
-        </ul>
-    </section>
-
-    <section id="repositories">
-        <h2>Repositories Populaires</h2>
-        <ul>
-            <li><strong><a href="https://github.com/nicolas-poirier/dnac-api-scripts">dnac-api-scripts</a></strong> - Various Scripts using DNA Center REST APIs <span class="code-inline">Python</span></li>            
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>📫 Me Contacter</h2>
-        <ul>
-            <li>LinkedIn : <a href="https://www.linkedin.com/in/nicolas-poirier-fr/">linkedin.com/in/nicolas-poirier</a></li>
-            <li>GitHub : <a href="https://github.com/nicolas-poirier">github.com/nicolas-poirier</a></li>
-            <li>Mes Certifications : <a href="https://www.credly.com/users/nicolas-poirier.a7338b19/badges#credly">Mon espace Credly</a></li>
-        </ul>
-    </section>
-
-</body>
-</html>
+<h2>Mes Articles Récents</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date: "%d/%m/%Y" }}</span> - 
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
