@@ -2,7 +2,8 @@
 layout: default
 ---
 
-Plus de 15 ans d'expériences dans la conception et le déploiement d'infrastructures réseaux et de sécurité. Actuellement impliqué sur l'accompagnement à la mise en place de socles d'automatisation agnostiques pour permettre des automatisations de bout en bout.
+Plus de 15 ans d'expériences dans la conception et le déploiement d'infrastructures réseaux et de sécurité. D'un naturel curieux, je m'intéresse à tout ce qui touche aux réseaux Campus (filaire et sans-fil), Datacenters, Backbone, boucle MAN.
+Depuis leur conception, déploiement, sécurisation, optimisation. Gros focus actuellement sur la partie automatisation des infrastructures.
 
 ## 🔧 Expertise Principale
 * **Automatisation d'infrastructure réseau et de sécurité :** Source de vérité (Nautobot, Netbox, Infrahub), Moteurs d'exécution (Ansible, Python, Nornir), Orchestration, Portail Self-Service (Django).
@@ -22,3 +23,4 @@ Plus de 15 ans d'expériences dans la conception et le déploiement d'infrastruc
 ## 📫 Me Contacter
 * [LinkedIn](https://linkedin.com/in/nicolas-poirier)
 * [GitHub](https://github.com/nicolas-poirier)
+* [Mes Certifications](https://www.credly.com/users/nicolas-poirier.a7338b19/badges#credly)
