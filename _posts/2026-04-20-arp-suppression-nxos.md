@@ -97,6 +97,7 @@ site2(config)#
 
 ## Étape 4: Configuration Finale de l'ARP-Ether
 Maintenant que nous avons libéré de l'espace, nous pouvons allouer la mémoire pour l'interception ARP.
+
 **_⚠️ Attention au piège de l'architecture VXLAN_** : Il est impératif d'utiliser l'argument double-wide. Les paquets VXLAN étant encapsulés, les clés de recherche dans la TCAM sont plus larges que la normale.
 
 ```
@@ -123,7 +124,8 @@ Une fois l'infrastructure prête et la configuration appliquée, voici les trois
 
 **- Vérifier l'activation sur le VNI (Ex: VLAN 10 ici)**
 Le flag **SA** (Suppress ARP) doit être présent sur la ligne de votre VNI.
-	- `show nve vni 10010`
+	
+- `show nve vni 10010`
 
 ```
 site1# show nve vni 10010
@@ -144,7 +146,8 @@ site1#
 
 **- Consulter le cache de suppression ARP**
 Cette table affiche les correspondances IP/MAC que le switch a apprises (soit localement, soit via BGP EVPN) et pour lesquelles il est capable de répondre directement.
-	- `show ip arp suppression-cache vlan 10`
+	
+- `show ip arp suppression-cache vlan 10`
 
 ```
 site1# show ip arp suppression-cache vlan 10
@@ -165,7 +168,8 @@ site1#
 
 **- Prouver que l'interception fonctionne**
 Cette commande est cruciale pour le troubleshooting. Elle permet de voir concrètement si le switch intercepte des requêtes et y répond localement (Local Responses).
-	- `show ip arp suppression-cache statistics vlan 10`
+	
+- `show ip arp suppression-cache statistics vlan 10`
 
 ```
 site1# show ip arp suppression-cache statistics
