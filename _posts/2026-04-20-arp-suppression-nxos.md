@@ -82,7 +82,7 @@ site2(config)# reload
 This command will reboot the system. (y/n)?  [n] y
 ```
 
-**Note Importante**: Les modifications de la table TCAM nécessitent toujours une sauvegarde de la configuration et un redémarrage complet (reload) de l'équipement pour que le matériel réalloue la mémoire.
+**_**Note Importante**: Les modifications de la table TCAM nécessitent toujours une sauvegarde de la configuration et un redémarrage complet (reload) de l'équipement pour que le matériel réalloue la mémoire._**
 
 Après redémarrage, on valide que l'espace a bien été réduit :
 ```
@@ -116,7 +116,7 @@ site2# show hardware access-list tcam region | inclu arp
 site2# 
 ```
 
-*Note: On peut maintenant retourner sur l'interface NVE et activer suppress-arp sans générer d'erreur).*
+**_*Note: On peut maintenant retourner sur l'interface NVE et activer suppress-arp sans générer d'erreur).*_**
 
 # Étape 5: Validation du fonctionnement
 Une fois l'infrastructure prête et la configuration appliquée, voici les trois commandes essentielles pour s'assurer que l'ARP Suppression intercepte et répond correctement au trafic BUM.
