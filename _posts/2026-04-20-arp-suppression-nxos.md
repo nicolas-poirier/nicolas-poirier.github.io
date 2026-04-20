@@ -82,7 +82,7 @@ site2(config)# reload
 This command will reboot the system. (y/n)?  [n] y
 ```
 
-**_**Note Importante**: Les modifications de la table TCAM nécessitent toujours une sauvegarde de la configuration et un redémarrage complet (reload) de l'équipement pour que le matériel réalloue la mémoire._**
+**_⚠️ Note Importante_**: Les modifications de la table TCAM nécessitent toujours une sauvegarde de la configuration et un redémarrage complet (reload) de l'équipement pour que le matériel réalloue la mémoire.
 
 Après redémarrage, on valide que l'espace a bien été réduit :
 ```
@@ -97,7 +97,7 @@ site2(config)#
 
 ## Étape 4: Configuration Finale de l'ARP-Ether
 Maintenant que nous avons libéré de l'espace, nous pouvons allouer la mémoire pour l'interception ARP.
-**Attention au piège de l'architecture VXLAN** : Il est impératif d'utiliser l'argument double-wide. Les paquets VXLAN étant encapsulés, les clés de recherche dans la TCAM sont plus larges que la normale.
+**_⚠️ Attention au piège de l'architecture VXLAN_** : Il est impératif d'utiliser l'argument double-wide. Les paquets VXLAN étant encapsulés, les clés de recherche dans la TCAM sont plus larges que la normale.
 
 ```
 site2(config)# hardware access-list tcam region arp-ether 256 double-wide 
@@ -116,7 +116,7 @@ site2# show hardware access-list tcam region | inclu arp
 site2# 
 ```
 
-**_*Note: On peut maintenant retourner sur l'interface NVE et activer suppress-arp sans générer d'erreur).*_**
+**_ℹ️ Note:_** *On peut maintenant retourner sur l'interface NVE et activer suppress-arp sans générer d'erreur).*
 
 # Étape 5: Validation du fonctionnement
 Une fois l'infrastructure prête et la configuration appliquée, voici les trois commandes essentielles pour s'assurer que l'ARP Suppression intercepte et répond correctement au trafic BUM.
